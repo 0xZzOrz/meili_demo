@@ -7,8 +7,8 @@ import { Sidebar } from "@/components/layout/sidebar";
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
-  title: "MeiliCloud - 企业管理系统",
-  description: "现代化的企业管理系统",
+  title: "Cybernaut - 知识库管理系统",
+  description: "知识库管理系统",
 };
 
 export default function RootLayout({

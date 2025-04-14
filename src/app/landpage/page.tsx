@@ -56,9 +56,9 @@ export default function LandingPage() {
       <div className="w-full px-6">
         <div className="max-w-7xl mx-auto">
           <div className="mb-8">
-            <h1 className="text-3xl font-bold mb-4">欢迎使用 MeiliCloud</h1>
+            <h1 className="text-3xl font-bold mb-4">欢迎使用 CybernautCloud</h1>
             <p className="text-gray-600">
-              MeiliCloud 是一个现代化的企业管理系统，提供全方位的企业服务。
+            CybernautCloud 是一个现代化的知识管理系统，提供全方位的企业知识内容服务。
             </p>
           </div>
           <motion.div 
