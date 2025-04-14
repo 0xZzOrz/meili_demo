@@ -12,6 +12,7 @@ import {
   faThLarge,
   faList,
   faSearch,
+  faSort,
   faSortUp,
   faSortDown
 } from '@fortawesome/free-solid-svg-icons'
