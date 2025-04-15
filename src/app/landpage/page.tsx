@@ -61,6 +61,35 @@ export default function LandingPage() {
             CybernautCloud 是一个现代化的知识管理系统，提供全方位的企业知识内容服务。
             </p>
           </div>
+           {/* AIGC 对话框 */}
+           <motion.div 
+            className="my-8"
+            initial={{ opacity: 0, y: 30 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ 
+              duration: 0.8,
+              delay: 0,
+              ease: [0.25, 0.1, 0.25, 1]
+            }}
+          >
+            <Card className="bg-white">
+              <div className="px-6">
+                <div className="flex items-center justify-center space-x-2 mb-4">
+                  <FontAwesomeIcon icon={faRobot} className="h-5 w-5 text-purple-500" />
+                  <h2 className="text-lg font-semibold">AI 助手</h2>
+                </div>
+                <div className="flex items-center space-x-4">
+                  <Input
+                    placeholder="输入您的问题，按回车键确认"
+                    value={inputValue}
+                    onChange={(e) => setInputValue(e.target.value)}
+                    onKeyDown={handleKeyDown}
+                    className="flex-1"
+                  />
+                </div>
+              </div>
+            </Card>
+          </motion.div>
           <motion.div 
             className="grid grid-cols-3 gap-8"
             variants={container}
@@ -197,35 +226,7 @@ export default function LandingPage() {
             </motion.div>
           </motion.div>
 
-          {/* AIGC 对话框 */}
-          <motion.div 
-            className="mt-8"
-            initial={{ opacity: 0, y: 30 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ 
-              duration: 0.8,
-              delay: 0.9,
-              ease: [0.25, 0.1, 0.25, 1]
-            }}
-          >
-            <Card className="bg-white">
-              <div className="px-6">
-                <div className="flex items-center space-x-2 mb-4">
-                  <FontAwesomeIcon icon={faRobot} className="h-5 w-5 text-purple-500" />
-                  <h2 className="text-lg font-semibold">AI 助手</h2>
-                </div>
-                <div className="flex items-center space-x-4">
-                  <Input
-                    placeholder="输入您的问题，按回车键确认"
-                    value={inputValue}
-                    onChange={(e) => setInputValue(e.target.value)}
-                    onKeyDown={handleKeyDown}
-                    className="flex-1"
-                  />
-                </div>
-              </div>
-            </Card>
-          </motion.div>
+         
         </div>
       </div>
     </div>
