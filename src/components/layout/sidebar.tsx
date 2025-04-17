@@ -5,7 +5,8 @@ import {
   faHome,
   faChartLine,
   faFileAlt,
-  faRobot
+  faRobot,
+  faClipboardCheck
 } from '@fortawesome/free-solid-svg-icons'
 import Link from 'next/link'
 import { usePathname } from 'next/navigation'
@@ -14,6 +15,7 @@ const navItems = [
   { href: '/landpage', icon: faHome, label: '工作台' },
   { href: '/overview', icon: faChartLine, label: '项目概览' },
   { href: '/document', icon: faFileAlt, label: '文档' },
+  { href: '/quality-inspection', icon: faClipboardCheck, label: '产品质检' },
   { href: '/aigc', icon: faRobot, label: 'AI助手' }
 ]
 
