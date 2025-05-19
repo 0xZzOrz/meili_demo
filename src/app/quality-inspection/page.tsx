@@ -40,6 +40,7 @@ const fans = [
     material: '碳纤维复合材料',
     application: '工业冷却',
     description: '高性能工业冷却风扇，采用先进复合材料制造',
+    image: '/images/AX2000.jpg',
     blades: [
       { id: 'blade1', name: '叶片A', status: 2 },
       { id: 'blade2', name: '叶片B', status: 4 },
@@ -54,6 +55,7 @@ const fans = [
     material: '钛合金材料',
     application: '航空领域',
     description: '航空级别高强度风扇，采用特种钛合金制造',
+    image: '/images/BX3000.jpg',
     blades: [
       { id: 'blade4', name: '叶片D', status: 3 },
       { id: 'blade5', name: '叶片E', status: 5 },
@@ -384,39 +386,50 @@ export default function QualityInspection() {
 
           <Card className="bg-white p-6 mb-8">
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-              <div className="flex items-start space-x-3">
-                <FontAwesomeIcon icon={faInfoCircle} className="h-5 w-5 text-blue-500 mt-1" />
-                <div>
-                  <h3 className="font-medium text-gray-900">型号</h3>
-                  <p className="text-gray-600">{selectedFan.model}</p>
+              <div className="lg:col-span-2 grid grid-cols-1 md:grid-cols-2 gap-6">
+                <div className="flex items-start space-x-3">
+                  <FontAwesomeIcon icon={faInfoCircle} className="h-5 w-5 text-blue-500 mt-1" />
+                  <div>
+                    <h3 className="font-medium text-gray-900">型号</h3>
+                    <p className="text-gray-600">{selectedFan.model}</p>
+                  </div>
+                </div>
+                <div className="flex items-start space-x-3">
+                  <FontAwesomeIcon icon={faRuler} className="h-5 w-5 text-blue-500 mt-1" />
+                  <div>
+                    <h3 className="font-medium text-gray-900">尺寸</h3>
+                    <p className="text-gray-600">{selectedFan.size}</p>
+                  </div>
+                </div>
+                <div className="flex items-start space-x-3">
+                  <FontAwesomeIcon icon={faGears} className="h-5 w-5 text-blue-500 mt-1" />
+                  <div>
+                    <h3 className="font-medium text-gray-900">材料</h3>
+                    <p className="text-gray-600">{selectedFan.material}</p>
+                  </div>
+                </div>
+                <div className="flex items-start space-x-3">
+                  <FontAwesomeIcon icon={faLayerGroup} className="h-5 w-5 text-blue-500 mt-1" />
+                  <div>
+                    <h3 className="font-medium text-gray-900">应用领域</h3>
+                    <p className="text-gray-600">{selectedFan.application}</p>
+                  </div>
+                </div>
+                <div className="md:col-span-2 flex items-start space-x-3">
+                  <FontAwesomeIcon icon={faFileAlt} className="h-5 w-5 text-blue-500 mt-1" />
+                  <div>
+                    <h3 className="font-medium text-gray-900">产品描述</h3>
+                    <p className="text-gray-600">{selectedFan.description}</p>
+                  </div>
                 </div>
               </div>
-              <div className="flex items-start space-x-3">
-                <FontAwesomeIcon icon={faRuler} className="h-5 w-5 text-blue-500 mt-1" />
-                <div>
-                  <h3 className="font-medium text-gray-900">尺寸</h3>
-                  <p className="text-gray-600">{selectedFan.size}</p>
-                </div>
-              </div>
-              <div className="flex items-start space-x-3">
-                <FontAwesomeIcon icon={faGears} className="h-5 w-5 text-blue-500 mt-1" />
-                <div>
-                  <h3 className="font-medium text-gray-900">材料</h3>
-                  <p className="text-gray-600">{selectedFan.material}</p>
-                </div>
-              </div>
-              <div className="flex items-start space-x-3">
-                <FontAwesomeIcon icon={faLayerGroup} className="h-5 w-5 text-blue-500 mt-1" />
-                <div>
-                  <h3 className="font-medium text-gray-900">应用领域</h3>
-                  <p className="text-gray-600">{selectedFan.application}</p>
-                </div>
-              </div>
-              <div className="lg:col-span-2 flex items-start space-x-3">
-                <FontAwesomeIcon icon={faFileAlt} className="h-5 w-5 text-blue-500 mt-1" />
-                <div>
-                  <h3 className="font-medium text-gray-900">产品描述</h3>
-                  <p className="text-gray-600">{selectedFan.description}</p>
+              <div className="lg:col-span-1 flex items-center justify-center">
+                <div className="w-[200px] h-[200px] bg-gray-50 rounded-lg p-2">
+                  <img 
+                    src={selectedFan.image} 
+                    alt={selectedFan.name}
+                    className="w-full h-full object-contain rounded-lg opacity-90"
+                  />
                 </div>
               </div>
             </div>
