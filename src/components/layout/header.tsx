@@ -2,7 +2,6 @@
 
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faBell, faQuestionCircle, faBars, faStar, faPlus } from '@fortawesome/free-solid-svg-icons'
-import { Input } from "@/components/ui/input"
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar"
 import { Button } from "@/components/ui/button"
 import {
@@ -13,6 +12,7 @@ import {
   DropdownMenuSeparator,
   DropdownMenuTrigger,
 } from "@/components/ui/dropdown-menu"
+import { GlobalSearch } from "@/components/search/global-search"
 import Link from 'next/link'
 
 export function Header() {
@@ -46,11 +46,7 @@ export function Header() {
       </div>
       
       <div className="flex items-center px-4 space-x-4">
-        <Input 
-          className="w-[300px] bg-[#2C3E5D] border-0 text-white placeholder:text-gray-400"
-          placeholder="搜索..." 
-          type="search"
-        />
+        <GlobalSearch />
         
         <Button variant="ghost" size="icon" className="text-white">
           <FontAwesomeIcon icon={faBell} className="h-5 w-5" />

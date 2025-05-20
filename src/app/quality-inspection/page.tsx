@@ -99,19 +99,19 @@ const stages = [
         name: '纤维材料检验报告.pdf', 
         icon: faFileAlt,
         type: 'pdf',
-        previewUrl: '/preview/fiber-report.pdf'
+        previewUrl: '/preview/纤维材料检验报告.pdf'
       },
       { 
         name: '芯材检验报告.xlsx', 
         icon: faFileAlt,
         type: 'excel',
-        previewUrl: '/preview/core-report.xlsx'
+        previewUrl: '/preview/芯材检验报告.xlsx'
       },
       { 
         name: '胶粘剂与涂层检验报告.docx', 
         icon: faFileAlt,
         type: 'docx',
-        previewUrl: '/preview/adhesive-report.docx'
+        previewUrl: '/preview/胶粘剂与涂层检验报告.docx'
       },
       { 
         name: '材料外观照片.jpg', 
@@ -132,13 +132,13 @@ const stages = [
         name: 'XX工艺检验报告.pdf', 
         icon: faFileAlt,
         type: 'pdf',
-        previewUrl: '/preview/process-report.pdf'
+        previewUrl: '/preview/XX工艺检验报告.pdf'
       },
       { 
         name: '检验视频.mov', 
         icon: faFileVideo,
         type: 'video',
-        previewUrl: '/preview/inspection-video.mov'
+        previewUrl: '/preview/检验视频.mov'
       },
       { 
         name: '不合格品图片.jpg', 
@@ -165,19 +165,19 @@ const stages = [
         name: '组装工艺检验报告.docx', 
         icon: faFileAlt,
         type: 'docx',
-        previewUrl: '/preview/assembly-report.docx'
+        previewUrl: '/preview/组装工艺检验报告.docx'
       },
       { 
         name: '干膜厚度检测报告.xlsx', 
         icon: faFileAlt,
         type: 'excel',
-        previewUrl: '/preview/thickness-report.xlsx'
+        previewUrl: '/preview/干膜厚度检测报告.xlsx'
       },
       { 
         name: '导电通路电阻测试报告.pdf', 
         icon: faFileAlt,
         type: 'pdf',
-        previewUrl: '/preview/resistance-report.pdf'
+        previewUrl: '/preview/导电通路电阻测试报告.pdf'
       },
       { 
         name: '组装过程照片.jpg', 
@@ -198,19 +198,19 @@ const stages = [
         name: '产品尺寸检验报告.pdf', 
         icon: faFileAlt,
         type: 'pdf',
-        previewUrl: '/preview/dimension-report.pdf'
+        previewUrl: '/preview/产品尺寸检验报告.pdf'
       },
       { 
         name: '动平衡测试报告.xlsx', 
         icon: faFileAlt,
         type: 'excel',
-        previewUrl: '/preview/balance-report.xlsx'
+        previewUrl: '/preview/动平衡测试报告.xlsx'
       },
       { 
         name: '疲劳试验报告.docx', 
         icon: faFileAlt,
         type: 'docx',
-        previewUrl: '/preview/fatigue-report.docx'
+        previewUrl: '/preview/疲劳试验报告.docx'
       },
       { 
         name: '成品照片.jpg', 
@@ -231,13 +231,13 @@ const stages = [
         name: '胶接缺陷检测报告.pdf', 
         icon: faFileAlt,
         type: 'pdf',
-        previewUrl: '/preview/bonding-report.pdf'
+        previewUrl: '/preview/胶接缺陷检测报告.pdf'
       },
       { 
         name: '内部脱粘检测报告.xlsx', 
         icon: faFileAlt,
         type: 'excel',
-        previewUrl: '/preview/delamination-report.xlsx'
+        previewUrl: '/preview/内部脱粘检测报告.xlsx'
       },
       { 
         name: '检测过程照片.jpg', 
@@ -258,7 +258,7 @@ const stages = [
         name: '产品出厂检验报告.docx', 
         icon: faFileAlt,
         type: 'docx',
-        previewUrl: '/preview/final-report.docx'
+        previewUrl: '/preview/产品出厂检验报告.docx'
       },
       { 
         name: '包装照片.jpg', 
