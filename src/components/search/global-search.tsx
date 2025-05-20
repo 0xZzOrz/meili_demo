@@ -8,7 +8,11 @@ import { Dialog, DialogContent, DialogClose } from "@/components/ui/dialog"
 import { Checkbox } from "@/components/ui/checkbox"
 import { Label } from "@/components/ui/label"
 import { Button } from "@/components/ui/button"
-import FilePreview from '@/components/FilePreview'
+import dynamic from 'next/dynamic'
+
+const FilePreview = dynamic(() => import('@/components/FilePreview'), {
+  ssr: false
+})
 
 interface SearchResult {
   file: {

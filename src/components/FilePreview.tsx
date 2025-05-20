@@ -1,11 +1,8 @@
 'use client'
+
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faFileAlt, faTimes } from '@fortawesome/free-solid-svg-icons'
 import { useEffect, useRef, useState } from 'react'
-import dynamic from 'next/dynamic'
-import jsPreviewDocx from '@js-preview/docx'
-import jsPreviewExcel from '@js-preview/excel'
-import JsPdfPreview from '@js-preview/pdf'
 import '@js-preview/docx/lib/index.css'
 import '@js-preview/excel/lib/index.css'
 
@@ -67,15 +64,20 @@ export default function FilePreview({ file, onClose }: FilePreviewProps) {
             previewerRef.current.destroy?.()
           }
 
+          // 动态导入预览器
+          let previewerModule
           switch (file.type) {
             case 'pdf':
-              previewer = JsPdfPreview.init(previewRef.current)
+              previewerModule = await import('@js-preview/pdf')
+              previewer = previewerModule.default.init(previewRef.current)
               break
             case 'excel':
-              previewer = jsPreviewExcel.init(previewRef.current)
+              previewerModule = await import('@js-preview/excel')
+              previewer = previewerModule.default.init(previewRef.current)
               break
             case 'docx':
-              previewer = jsPreviewDocx.init(previewRef.current)
+              previewerModule = await import('@js-preview/docx')
+              previewer = previewerModule.default.init(previewRef.current)
               break
             default:
               return
