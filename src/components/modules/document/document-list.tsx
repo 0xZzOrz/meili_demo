@@ -19,6 +19,21 @@ import { Button } from '@/components/ui/button'
 import { Card } from '@/components/ui/card'
 import { Input } from '@/components/ui/input'
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from '@/components/ui/select'
+import { 
+  faFolderOpen,
+  faLink,
+  faEdit,
+  faPaperPlane,
+  faFont,
+  faEye,
+  faDownload,
+  faBookmark,
+  faCopy,
+  faArrowRight,
+  faPlus,
+  faArchive,
+  faTrash
+} from '@fortawesome/free-solid-svg-icons'
 
 interface Document {
   id: string
@@ -301,7 +316,62 @@ export function DocumentList({ viewMode, onViewModeChange, selectedSpace, select
           <FontAwesomeIcon icon={sortOrder === 'asc' ? faSortUp : faSortDown} className="h-4 w-4" />
         </Button>
       </div>
-
+      <div className="mb-4 p-1 bg-gray-50 rounded-lg">
+          <div className="flex flex-wrap gap-2">
+            <Button variant="outline" size="sm" className="text-sm">
+              <FontAwesomeIcon icon={faFolderOpen} className="h-4 w-4 mr-1" />
+              打开
+            </Button>
+            <Button variant="outline" size="sm" className="text-sm">
+              <FontAwesomeIcon icon={faLink} className="h-4 w-4 mr-1" />
+              复制链接
+            </Button>
+            <Button variant="outline" size="sm" className="text-sm">
+              <FontAwesomeIcon icon={faEdit} className="h-4 w-4 mr-1" />
+              编辑
+            </Button>
+            <Button variant="outline" size="sm" className="text-sm">
+              <FontAwesomeIcon icon={faPaperPlane} className="h-4 w-4 mr-1" />
+              发送到
+            </Button>
+            <Button variant="outline" size="sm" className="text-sm">
+              <FontAwesomeIcon icon={faFont} className="h-4 w-4 mr-1" />
+              重命名
+            </Button>
+            <Button variant="outline" size="sm" className="text-sm">
+              <FontAwesomeIcon icon={faEye} className="h-4 w-4 mr-1" />
+              查看权限
+            </Button>
+            <Button variant="outline" size="sm" className="text-sm">
+              <FontAwesomeIcon icon={faDownload} className="h-4 w-4 mr-1" />
+              下载
+            </Button>
+            <Button variant="outline" size="sm" className="text-sm">
+              <FontAwesomeIcon icon={faBookmark} className="h-4 w-4 mr-1" />
+              保留
+            </Button>
+            <Button variant="outline" size="sm" className="text-sm">
+              <FontAwesomeIcon icon={faCopy} className="h-4 w-4 mr-1" />
+              复制
+            </Button>
+            <Button variant="outline" size="sm" className="text-sm">
+              <FontAwesomeIcon icon={faArrowRight} className="h-4 w-4 mr-1" />
+              移动
+            </Button>
+            <Button variant="outline" size="sm" className="text-sm">
+              <FontAwesomeIcon icon={faPlus} className="h-4 w-4 mr-1" />
+              添加版本
+            </Button>
+            <Button variant="outline" size="sm" className="text-sm">
+              <FontAwesomeIcon icon={faArchive} className="h-4 w-4 mr-1" />
+              收集
+            </Button>
+            <Button variant="outline" size="sm" className="text-sm text-red-600 hover:text-red-700">
+              <FontAwesomeIcon icon={faTrash} className="h-4 w-4 mr-1" />
+              删除
+            </Button>
+          </div>
+        </div>
       {documents.length === 0 ? (
         <div className="flex flex-col items-center justify-center h-64 text-gray-400">
           <FontAwesomeIcon icon={faFile} className="h-12 w-12 mb-4" />

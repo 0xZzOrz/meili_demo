@@ -4,6 +4,7 @@ import { useState } from 'react'
 import { DocumentList } from '@/components/modules/document/document-list'
 import { SpaceSelector } from '@/components/modules/document/space-selector'
 
+
 export default function DocumentPage() {
   const [selectedSpace, setSelectedSpace] = useState('all')
   const [selectedFolder, setSelectedFolder] = useState<string>()
@@ -24,6 +25,9 @@ export default function DocumentPage() {
         />
       </div>
       <div className="flex-1 p-4">
+        {/* 工具栏按钮 */}
+
+        
         <DocumentList 
           viewMode={viewMode}
           onViewModeChange={setViewMode}
